@@ -1,17 +1,31 @@
 <html>
   <head>
-    <title>PHP Test Page</title>
+    <title>World's Smallest Form Handler</title>
   </head>
   <body>
-    <h1>PHP Test Page - Can you see this?</h1>
+    <h1>World's Smallest Form Handler</h1>
+    
     <?php
-    echo '<p>This is PHP! xoxoxoxoxoxxo</p>';
+// if whatever is in the parenthesis is true then run curly boii else run the second curly boii
+// isset means is this data ready
+    if(isset($_POST["FirstName"])){//show data
+                                   
+      echo $_POST["FirstName"];
+                                   
+    }else{//show form
+          
+      echo '
+          <form method="post" action="">
+          <p>First Name: <input type="text"name="FirstName" /></p>
+          <p><input type="submit" /></p>
+          </form>
+            ';
+    }
+// echo "this is php"
+
     ?>
-    <p>Hello from GitHub!</p>
-    <?php
-    echo '<p>This is a change from repl.it!!</p>';
-    ?>
-    <p>From VSCode</p>
-  
+
+    
+    
   </body>
 </html>
